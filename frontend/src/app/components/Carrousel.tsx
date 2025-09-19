@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {ChevronRightIcon, ChevronLeftIcon} from "lucide-react"; // Ícones para navegação
 import {useRef} from "react";
+import { Button, Card } from "react-bootstrap";
 
 // ===============================
 // Dados do carrossel
@@ -19,26 +20,24 @@ const items = [
 // ===============================
 // Componente do item individual
 // ===============================
-function CarouselItem({item}: { item: (typeof items)[0] }) {
-    return (
-        <Link href={`/pages/trilha?id=${item.id}`}>
-            <div
-            className="bg-white p-3 rounded-2xl shadow-md text-center hover:scale-105 transition-transform min-w-[140px] sm:min-w-[160px] md:min-w-[180px] lg:min-w-[200px] max-w-[60vw] flex-shrink-0">
-            {/* Imagem do curso */}
-            <img
-                src={item.image}
-                alt={item.title}
-                className="mx-auto max-w-30 max-h-24 min-w-28 min-h-24 object-contain mb-2 rounded-xl"
-            />
-            {/* Título do curso */}
-            <h2 className="text-white font-semibold bg-amber-500 rounded px-2 py-1 text-xs md:text-sm truncate">
-                {item.title}
-            </h2>
-            {/* Descrição */}
-            <p className="text-xs text-black-500 mt-1">{item.description}</p>
-        </div>
-        </Link>
-    );
+function CarouselItem({ item }: { item: (typeof items)[0] }) {
+  return (
+    <Link href={`/pages/trilha?id=${item.id}`}>
+      <Card style={{ width: "15rem" }}>
+        <Card.Img
+          variant="top"
+          src={item.image}
+          alt={item.title}
+          className="mx-auto max-w-30 max-h-24 min-w-28 min-h-24 object-contain my-2 rounded-xl"
+        />
+        <Card.Body>
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Text>{item.description}</Card.Text>
+          <Button variant="primary">Clique para entrar</Button>
+        </Card.Body>
+      </Card>
+    </Link>
+  );
 }
 
 // ===============================
