@@ -3,6 +3,8 @@ import * as Phaser from "phaser";
 export default class MainScene extends Phaser.Scene {
   jogadorHP = 100;
   inimigoHP = 100;
+  jogadorLabel!: Phaser.GameObjects.Text;
+  inimigoLabel!: Phaser.GameObjects.Text;
  
   jogadorHPBar!: Phaser.GameObjects.Graphics;
   inimigoHPBar!: Phaser.GameObjects.Graphics;
@@ -130,12 +132,7 @@ export default class MainScene extends Phaser.Scene {
   this.inimigoHPBar = this.add.graphics();
   this.updateHPBars();
 }
-  reposicionarHPLabels() {
-    const l = this.layout;
- 
-    this.jogadorLabel.setPosition(20, 10).setFontSize(l.fontSize);
-    this.inimigoLabel.setPosition(this.scale.width - l.hpBarWidth - 20, 10).setFontSize(l.fontSize);
-  }
+
   reposicionarHPBars() {
   const l = this.layout;
  
@@ -210,7 +207,7 @@ export default class MainScene extends Phaser.Scene {
     this.opcoes = [];
  
     const startX = l.balaoX + l.padding;
-    let startY = l.balaoY + l.padding * 3;
+    const startY = l.balaoY + l.padding * 3;
  
     opcoesArray.forEach((opcao, index) => {
       const btn = this.createButton(
