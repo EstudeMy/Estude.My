@@ -11,7 +11,7 @@ export default function Conquistas() {
     const unlockedAchievements = 37;     // Conquistas desbloqueadas pelo usuário
     const percentage = (unlockedAchievements / totalAchievements) * 100; // Progresso em %
 
-    const placeholderImage = "/e880cc04-498a-4b80-a79e-9cc87ed73f16.png"; // imagem placeholder (não usada neste caso)
+    // const placeholderImage = "/e880cc04-498a-4b80-a79e-9cc87ed73f16.png"; // imagem placeholder (não usada neste caso)
 
     return (
         <div className="bg-gray-800 text-white p-4 rounded-xl w-[400px] mx-auto mt-4 shadow-lg">

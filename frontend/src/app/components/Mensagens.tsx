@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, {useState} from "react";
 
 // Dados simulados de notificações
@@ -51,7 +52,9 @@ export default function App() {
                             className="bg-gray-100 p-3 rounded shadow flex items-start gap-3"
                         >
                             {/* Avatar da notificação */}
-                            <img
+                            <Image
+                                width={40}
+                                height={40}
                                 src='/img/personagem.png'
                                 alt="avatar"
                                 className="rounded-full w-10 h-10"

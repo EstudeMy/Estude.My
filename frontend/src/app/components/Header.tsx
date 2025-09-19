@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
@@ -54,9 +55,10 @@ export default function Header() {
             {/* Área do usuário */}
             <div className="user">
                 <span>Olá, Aluno!</span>
-                <img
+                <Image
+                    width={50}
+                    height={50}
                     src="/img/guerreiro.png"
-                    width="50"
                     alt="Avatar"
                     className="card-img"
                 />

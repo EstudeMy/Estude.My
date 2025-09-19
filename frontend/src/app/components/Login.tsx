@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {useRouter} from 'next/navigation';
 import Logo from './Logo';
 import {Button} from 'react-bootstrap';
+import Image from 'next/image';
 
 const Login = () => {
     const router = useRouter(); // Hook para navegação programática
@@ -50,7 +51,7 @@ const Login = () => {
 
                 {/* Logo */}
                 <div className="mb-6 text-center">
-                    <img src="/svg/EstudeMyLogo.svg" alt="Logo" className="ml-11"/>
+                    <Image width={400} height={128} src="/svg/EstudeMyLogo.svg" alt="Logo" className="ml-11"/>
                 </div>
 
                 {/* Formulário de login */}

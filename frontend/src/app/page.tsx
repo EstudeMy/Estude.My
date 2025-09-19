@@ -4,6 +4,7 @@
 import CoinRain from "@/app/components/CoinRain"; // Efeito visual de moedas caindo
 import {Jaro} from "next/font/google"; // Fonte personalizada
 import {motion} from "framer-motion"; // Biblioteca para animações
+import Image from "next/image";
 
 // Configuração da fonte Jaro
 const jaro = Jaro({
@@ -59,7 +60,9 @@ export default function LandingPage() {
                 <section className="text-center max-w-3xl mb-12">
                     {/* Logo */}
                     <div className="mb-6">
-                        <img
+                        <Image
+                            width={400}
+                            height={128}
                             src="/svg/EstudeMyLogo.svg"
                             alt="Logo Estude.My"
                             className="m-auto h-32 drop-shadow-[4px_4px_0_#000]"

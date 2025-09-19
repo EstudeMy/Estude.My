@@ -2,6 +2,7 @@ import Footer from "@/app/components/Footer";       // Componente do rodapé
 import "@/app/styles/style_perfil.css";           // Estilos específicos da página de perfil
 import Topo from "@/app/components/Topo";         // Componente do topo/navegação
 import Link from "next/link";                     // Componente para navegação entre páginas
+import Image from "next/image";
 
 export default function PerfilPage() {
     return (
@@ -32,11 +33,13 @@ export default function PerfilPage() {
 
                             {/* Imagem do personagem */}
                             <div className="text-3xl p-4 rounded-xl">
-                                <img
+                                <Image
+
                                     className="mx-auto"
                                     src="/img/personagem.png"
                                     alt="Imagem do personagem Guerreiro"
                                     width={90}
+                                    height={90}
                                 />
                             </div>
 

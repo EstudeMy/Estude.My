@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {ChevronRightIcon, ChevronLeftIcon} from "lucide-react"; // Ícones para navegação
 import {useRef} from "react";
+import Image from "next/image";
 
 // ===============================
 // Dados do carrossel
@@ -25,7 +26,9 @@ function CarouselItem({item}: { item: (typeof items)[0] }) {
             <div
             className="bg-white p-3 rounded-2xl shadow-md text-center hover:scale-105 transition-transform min-w-[140px] sm:min-w-[160px] md:min-w-[180px] lg:min-w-[200px] max-w-[60vw] flex-shrink-0">
             {/* Imagem do curso */}
-            <img
+            <Image
+                width={120}
+                height={80}
                 src={item.image}
                 alt={item.title}
                 className="mx-auto max-w-30 max-h-24 min-w-28 min-h-24 object-contain mb-2 rounded-xl"
@@ -64,6 +67,7 @@ function Carrousel() {
                 {/* Botão de scroll para a esquerda */}
                 <button
                     onClick={() => scroll(-300)}
+                    title="Scroll para a esquerda"
                     className="p-3 hover:bg-sky-50 rounded"
                 >
                     <ChevronLeftIcon className="w-10 h-10"/>
@@ -81,6 +85,7 @@ function Carrousel() {
 
                 {/* Botão de scroll para a direita */}
                 <button
+                    title="Scroll para a direita"
                     onClick={() => scroll(300)}
                     className="p-3 hover:bg-sky-50 rounded"
                 >

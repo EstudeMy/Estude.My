@@ -10,6 +10,8 @@ export default function Progresso() {
             {/* Imagem do curso */}
             <div className="relative h-[160px]">
                 <Image
+                    width={400}
+                    height={160}
                     src="/img/ConsultAi.png"
                     alt="Imagem do curso"
                     layout="fill"         // Ocupa todo o container

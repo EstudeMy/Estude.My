@@ -244,6 +244,8 @@ const Topo = () => {
                             icon={
                                 <div className="w-6 h-6 relative">
                                     <Image
+                                        width={24}
+                                        height={24}
                                         src="/img/ConsultAi.png"
                                         fill
                                         alt="ConsultAI"
@@ -310,7 +312,7 @@ const Topo = () => {
                                 >
                                     {/* Logo */}
                                     <div className="mb-6 text-center my-1">
-                                        <img src="/svg/EstudeMyLogo.svg" alt="Logo"/>
+                                        <Image width={400} height={128} src="/svg/EstudeMyLogo.svg" alt="Logo"/>
                                     </div>
                                 </div>
                             </div>

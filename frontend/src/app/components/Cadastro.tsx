@@ -3,6 +3,7 @@
 import {useState} from "react";
 import Button from "react-bootstrap/Button";
 import Logo from "./Logo";
+import Image from "next/image";
 
 // Componente principal de cadastro
 const Cadastrar = () => {
@@ -118,7 +119,7 @@ const Cadastrar = () => {
 
                 {/* Logo */}
                 <div className="mb-6 text-center">
-                    <img src="/svg/EstudeMyLogo.svg" alt="Logo" className="ml-11"/>
+                    <Image width={400} height={128} src="/svg/EstudeMyLogo.svg" alt="Logo" className="ml-11"/>
                 </div>
 
                 {/* Seletor de tipo de usuário */}
@@ -205,6 +206,7 @@ const Cadastrar = () => {
                                     <select
                                         className="rounded-lg py-2 px-4 text-sm border-1 border-gray-400 bg-gray-100"
                                         required
+                                        title="Selecione sua titulação"
                                         value={titulacao}
                                         onChange={(e) => setTitulacao(e.target.value)}
                                     >
